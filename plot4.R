@@ -9,7 +9,7 @@ needData <- rawData[as.Date(rawData[,1], "%d/%m/%Y") >= as.Date("2007/02/01") &
                       as.Date(rawData[,1], "%d/%m/%Y") <= as.Date("2007/02/02"), ]
 time = strptime(paste(needData[,1], needData[,2]), format  ="%d/%m/%Y %H:%M:%S")
 
-png("plot4.png")
+png("plot4.png", width=480, height=480)
 par(mfrow = c(2,2))
 
 plot(time, needData$Global_active_power, type = "l", xlab = "", ylab = "Global Active Power")
